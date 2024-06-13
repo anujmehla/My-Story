@@ -1,0 +1,23 @@
+# DataSource settings: set here your own configurations for the database
+# connection. In this example, we are using PostgreSQL.
+spring.datasource.url=jdbc:postgresql://localhost:5432/MyStory
+spring.datasource.username=yourUsername
+spring.datasource.password=yourPassword
+  
+  # Hibernate properties
+  # The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+  
+  # Hibernate ddl auto (none, update, create, create-drop, validate): with "update" Hibernate
+  # will attempt to update the schema, with "create" will create the schema,
+  # with "create-drop" will drop the schema at the end of the session.
+spring.jpa.hibernate.ddl-auto=update
+  
+  # Enable logging of SQL statements
+spring.jpa.show-sql=true
+  
+  # Specify the naming strategy
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+# Lazy loading
+#spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
